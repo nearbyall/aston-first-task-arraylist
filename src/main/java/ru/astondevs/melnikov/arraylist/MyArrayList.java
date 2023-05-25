@@ -53,6 +53,26 @@ public class MyArrayList<E> {
     }
 
     /**
+     * Adds the specified element at the specified index in the list.
+     * Shifts any subsequent elements to the right (adds one to their indices).
+     *
+     * @param index   the index at which the element is to be inserted
+     * @param element the element to be inserted
+     * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index > size)
+     */
+    public void add(int index, E element) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index out of range: " + index);
+        }
+        if (size == elements.length) {
+            increaseCapacity();
+        }
+        System.arraycopy(elements, index, elements, index + 1, size - index);
+        elements[index] = element;
+        size++;
+    }
+
+    /**
      * Returns the element at the specified index in the list.
      *
      * @param index the index of the element to be retrieved

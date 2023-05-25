@@ -19,11 +19,15 @@ class MyArrayListTest {
     void testAddAndGet() {
         myList.add(1);
         myList.add(2);
+        myList.add(0, 1);
         myList.add(3);
+        myList.add(2, 4);
 
         Assertions.assertEquals(1, myList.get(0));
-        Assertions.assertEquals(2, myList.get(1));
-        Assertions.assertEquals(3, myList.get(2));
+        Assertions.assertEquals(1, myList.get(1));
+        Assertions.assertEquals(4, myList.get(2));
+        Assertions.assertEquals(2, myList.get(3));
+        Assertions.assertEquals(3, myList.get(4));
     }
 
     @Test
