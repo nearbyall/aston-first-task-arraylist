@@ -128,6 +128,7 @@ public class MyArrayList<E> {
      * Sorts the elements of the list using the specified comparator.
      *
      * @param comparator the comparator to determine the order of the elements
+     * @see Comparator
      */
     public void sort(Comparator<? super E> comparator) {
         Arrays.sort((E[]) elements, 0, size, comparator);

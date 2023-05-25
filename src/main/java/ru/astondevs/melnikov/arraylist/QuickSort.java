@@ -15,6 +15,8 @@ public class QuickSort {
      *
      * @param list the MyArrayList to be sorted
      * @param <T>  the type of elements in the list, must implement Comparable
+     * @see Comparable
+     * @see MyArrayList
      */
     public static <T extends Comparable<T>> void sort(MyArrayList<T> list) {
         if (list == null || list.isEmpty()) {
@@ -29,6 +31,8 @@ public class QuickSort {
      * @param list       the MyArrayList to be sorted
      * @param comparator the comparator to determine the order of the elements
      * @param <T>        the type of elements in the list
+     * @see Comparator
+     * @see MyArrayList
      */
     public static <T> void sort(MyArrayList<T> list, Comparator<? super T> comparator) {
         if (list == null || list.isEmpty()) {
